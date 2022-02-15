@@ -1,4 +1,15 @@
-build quietPeriod: 10, job: 'Hello-pipeline'
-git 'https://github.com/cvr-venkat/java11-examples.git'
-git 'https://github.com/cvr-venkat/java11-examples.git'
-build quietPeriod: 3, job: 'spring-petclinic'
+node('apache-maven') {
+    stage ('git') {
+        git git 'https://github.com/cvr-venkat/java11-examples.git'
+    }
+    stage ('build') {
+    }
+        stage('git') {
+        }
+    archiveArtifacts artifacts: '', excludes: '**/*.jar' {
+
+    }
+   path '/home/ajay/jenkins/workspace/Hello-pipeline'
+}
+  
+    
