@@ -1,0 +1,2 @@
+build quietPeriod: 10, job: 'Hello-pipeline'
+git 'https://github.com/cvr-venkat/java11-examples.git'
