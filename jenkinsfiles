@@ -3,7 +3,7 @@ node('maven-state') {
         git 'https://github.com/cvr-venkat/java11-examples.git'
     }
     stage ('build') {
-        sh ' clean package'
+        sh 'mvn clean package'
     }
     stage ('archive'){
         archive 'target/*.jar'
