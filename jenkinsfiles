@@ -1,4 +1,4 @@
-node('apache-maven') {
+node('maven-state') {
     stage ('git') {
         git 'https://github.com/cvr-venkat/java11-examples.git'
     }
