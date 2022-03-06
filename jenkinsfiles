@@ -1,0 +1,13 @@
+node('apache-maven') {
+    stage ('git') {
+        git 'https://github.com/cvr-venkat/java11-examples.git'
+    }
+    stage ('build') {
+        sh 'mvn clean package'
+    }
+    stage ('archive'){
+        archive 'target/*.jar'
+    }
+}
+  
+ 
